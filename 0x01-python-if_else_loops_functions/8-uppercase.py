@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 def uppercase(str=''):
-#str == ' ' and return
-
     new_str = ''
 
     for char in str:
