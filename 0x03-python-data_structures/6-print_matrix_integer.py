@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
+    if type(matrix) is not list:
+        return
     if len(matrix[0]) == 0:
         print('')
     else:
