@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     """
-     The list comprehension yields same result:
-     square = [list(map(lambda x: x**2, matrix[idx])) for idx in range(len(matrix))]
-        return square
+        square_matrix_simple returns squares of input matrix
     """
     if type(matrix) is not list:
-        return None
+        return
     if len(matrix[0]) == 0:
-        return None
+        return
     squares = []
     for idx in range(len(matrix)):
         tmp = list(map(lambda x: x**2, matrix[idx]))
