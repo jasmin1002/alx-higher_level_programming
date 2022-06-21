@@ -5,11 +5,12 @@
 class Square:
     """Square defines a square plane object by size
 
-    The __init__ sets default value for size
 
     Args:
         size(int): describes size of a square
 
+    Attribute:
+        size(int): descibes size of a square
 
     """
 
