@@ -10,8 +10,7 @@ class Square:
     Args:
         size(int): describes size of a square
 
-    Attributes:
-        size(int): describes size of a square
+    Attributes: size(int): describes size of a square
 
     """
 
