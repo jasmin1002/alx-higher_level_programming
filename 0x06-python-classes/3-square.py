@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square Class"""
 
+
 class Square:
     """
     Square finds the size of its area
@@ -22,5 +23,6 @@ class Square:
             raise TypeError("size must be an integer")
         else:
             self.__size = size
+
     def area(self):
         return self.__size ** 2
