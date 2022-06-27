@@ -3,4 +3,8 @@
 
 
 class Rectangle():
+    """
+    An empty class with no class / instance fields
+    and methods
+    """
     pass
