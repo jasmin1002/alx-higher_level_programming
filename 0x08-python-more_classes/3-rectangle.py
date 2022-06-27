@@ -18,8 +18,8 @@ class Rectangle():
         height: int
     """
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -72,13 +72,12 @@ class Rectangle():
         """
         shape = ''
 
-        if self.width == 0 and self.height == 0:
+        if self.width == 0 or self.height == 0:
             return shape
-        else:
-            for i in range(self.height):
-                for j in range(self.width):
-                    shape += '#'
+        for i in range(self.height):
+            for j in range(self.width):
+                shape += '#'
 
-                    if j == self.width - 1:
-                        shape += '\n'
-            return shape
+                if j == self.width - 1:
+                    shape += '\n'
+        return shape
