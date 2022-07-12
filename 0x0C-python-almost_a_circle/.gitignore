@@ -1,2 +1,2 @@
 tests/test_0-task.py
-__pycache__/
+*/__pycache__/
