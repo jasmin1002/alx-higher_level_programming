@@ -35,6 +35,44 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """
+        Update modifies class instance's value
+        Args:
+            args (tuple): no-keyword argument
+            kwargs (dictionary): key-worded argument
+        """
+        if args:
+            for i, j in enumerate(args):
+                if i == 0:
+                    self.id = j
+                elif i == 1:
+                    self.size = j
+                elif i == 2:
+                    self.x = j
+                else:
+                    self.y = j
+
+        else:
+            """kwargs parameter"""
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        """returns the dictionary representation of square"""
+        dic = {}
+        dic["id"] = self.id
+        dic["size"] = self.size
+        dic["x"] = self.x
+        dic["y"] = self.y
+        return dic
+
     def __str__(self):
         """Returns printable text-info for class instance"""
         return "[{}] ({}) {}/{} - {}".format(
