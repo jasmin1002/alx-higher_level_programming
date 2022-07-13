@@ -116,7 +116,6 @@ class Rectangle(Base):
             print(' ' * self.x, end='')
             print('#' * self.width)
 
-
     def __str__(self):
         """__str__ prints readable text-info describing the
         class instance
