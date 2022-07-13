@@ -22,7 +22,7 @@ class Square(Rectangle):
             id (int): instance identification number
         """
         super().__init__(size, size, x, y, id)
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
