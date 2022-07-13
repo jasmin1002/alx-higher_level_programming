@@ -122,4 +122,11 @@ class Rectangle(Base):
         """__str__ prints readable text-info describing the
         class instance
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[{}] ({}) {}/{} - {}/{}".format(
+                self.__class__.__name__,
+                self.id,
+                self.x,
+                self.y,
+                self.width,
+                self.height
+        )
