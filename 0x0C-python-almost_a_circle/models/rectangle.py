@@ -117,3 +117,9 @@ class Rectangle(Base):
                     print('#', end='\n')
                 else:
                     print('#', end='')
+
+    def __str__(self):
+        """__str__ prints readable text-info describing the
+        class instance
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
