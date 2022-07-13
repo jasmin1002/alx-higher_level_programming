@@ -108,3 +108,12 @@ class Rectangle(Base):
     def area(self):
         """area computes the area of any given rectangle instance"""
         return self.width * self.height
+
+    def display(self):
+        """display draws rectangle shape with its dimensions"""
+        for row in range(self.height):
+            for col in range(self.width):
+                if col == self.width - 1:
+                    print('#', end='\n')
+                else:
+                    print('#', end='')
