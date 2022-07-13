@@ -111,12 +111,11 @@ class Rectangle(Base):
 
     def display(self):
         """display draws rectangle shape with its dimensions"""
+        print('\n' * self.y, end='')
         for row in range(self.height):
-            for col in range(self.width):
-                if col == self.width - 1:
-                    print('#', end='\n')
-                else:
-                    print('#', end='')
+            print(' ' * self.x, end='')
+            print('#' * self.width)
+
 
     def __str__(self):
         """__str__ prints readable text-info describing the
