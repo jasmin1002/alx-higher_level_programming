@@ -129,8 +129,18 @@ class Rectangle(Base):
                 self.height
         )
 
-    def update(self, *args):
-        """Update modifies class instance's value"""
+    def update(self, *args, **kwargs):
+        """
+        Update modifies class instance's value
+
+        Args:
+            args (tuple): no-keyword argument
+            kwargs (dictionary): key-worded argument
+        """
+        if len(args) == 0:
+            list_tuple = kwargs.items()
+            for key, value in list_tuple:
+                setattr(self, key, value)
         try:
             self.id = args[0]
             self.width = args[1]
