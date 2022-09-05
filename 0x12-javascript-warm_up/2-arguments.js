@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
+const argv = process.argv;
 const subArray = argv.slice(2);
 
 if (subArray.length === 0) {
