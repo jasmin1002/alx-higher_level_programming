@@ -6,10 +6,11 @@ const BaseSquare = require('./5-square');
 module.exports = class Square extends BaseSquare {
   // Square print method
   charPrint (pattern) {
-    if (!pattern) {	// Use parent print method, if pattern === undefined
+    if (!pattern) { // Use parent print method, if pattern === undefined
       super.print();
     } else {
       let incr = 1;
+
       while (incr <= this.height) {
         let shape = '';
         for (let i = 1; i <= this.width; i++) shape += pattern;
