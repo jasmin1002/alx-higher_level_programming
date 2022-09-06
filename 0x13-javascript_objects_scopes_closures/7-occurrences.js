@@ -5,9 +5,9 @@ exports.nbOccurrences = function (list, searchElement) {
   if (!searchElement || !list[0]) return -1;
 
   // Iterate over given list.
-  list.forEach(item => {
-    if (item === searchElement) times += 1;
-  });
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === searchElement) times++;
+  }
 
   // Return No. of occurrence.
   return times;
