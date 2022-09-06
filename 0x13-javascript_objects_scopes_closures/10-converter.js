@@ -7,4 +7,4 @@ exports.converter = (function () {
       return result;
     };
   };
-}());
+})();
