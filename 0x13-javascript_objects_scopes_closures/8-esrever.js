@@ -6,7 +6,7 @@ exports.esrever = function (list) {
   const loop = Math.round(len / 2);
 
   for (let i = 0; i < loop; i++) {
-    // Temporary cache first element of a list
+    // Temporary cache ith element of a list
     const tmp = list[i];
 
     // Set index ith with (length - 1 - i)th value
