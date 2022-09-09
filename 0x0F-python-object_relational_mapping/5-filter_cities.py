@@ -39,10 +39,9 @@ if __name__ == '__main__':
         cur = db.cursor()
 
         # MySQL query
-        query = "SELECT cities.name \
-                FROM cities INNER JOIN states ON states.id = \
-                cities.state_id WHERE states.name = %(name)s \
-                ORDER BY cities.id ASC"
+        query = "SELECT cities.name FROM cities INNER JOIN \
+                states ON states.id = cities.state_id WHERE \
+                states.name = %(name)s ORDER BY cities.id ASC"
 
         cur.execute(query, {'name': state})
 
