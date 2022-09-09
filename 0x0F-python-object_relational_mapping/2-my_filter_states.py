@@ -40,12 +40,12 @@ if __name__ == '__main__':
         cur = db.cursor()
 
         # query
-        query = "SELECT * FROM states WHERE name = '{}'\
+        query = "SELECT * FROM states WHERE BINARY name = '{}'\
                 ORDER BY id".format(str(s_name))
         cur.execute(query)
 
         # Retrieve and store the queryset in state variable
-        state = cur.fetchone()
+        state = cur.fetchall()
 
         # Print the result to console (stdout)
         print(state)
