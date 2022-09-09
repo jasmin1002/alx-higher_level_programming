@@ -2,7 +2,7 @@
 '''
     This script uses MySQLdb module
     to connect to MySQL database and
-    query the database for lists of 
+    query the database for lists of
     states in states table.
 '''
 
