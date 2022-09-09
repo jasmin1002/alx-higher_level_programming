@@ -5,9 +5,7 @@ const values = Object.values(dict);
 const len = values.length;
 
 for (let i = 0; i < len; i++) {
-  let tmp;
-
-  for (key in dict) {
+  for (const key in dict) {
     if (dict.key === values[i]) break;
   }
 
