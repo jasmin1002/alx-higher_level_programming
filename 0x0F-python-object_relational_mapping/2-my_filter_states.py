@@ -39,7 +39,7 @@ if __name__ == '__main__':
         cur = db.cursor()
 
         # query
-        query = "SELECT * FROM states WHERE name = '{}'\
+        query = "SELECT * FROM states WHERE name LIKE BINARY '%{}%'\
                 ORDER BY id".format(s_name)
         cur.execute(query)
 
