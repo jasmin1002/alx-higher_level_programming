@@ -15,7 +15,7 @@ if __name__ == '__main__':
         mysql_username, mysql_passwd, db_name = inputs
     except ValueError:
         print(
-            "Not enough inputs (expected 3, got {})".format(len(inputs))
+            "Not enough inputs (expect 3, got {})".format(len(inputs))
         )
         sys.exit(1)
 
