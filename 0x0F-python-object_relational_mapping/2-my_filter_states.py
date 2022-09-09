@@ -17,7 +17,6 @@ if __name__ == '__main__':
 
     # Unpack input values
     try:
-        print(inputs)
         mysql_username, mysql_passwd, db_name, s_name = inputs
     except ValueError:
         msg = "Not enough inputs (expect 3, got {})".format(len(inputs))
@@ -40,8 +39,8 @@ if __name__ == '__main__':
         cur = db.cursor()
 
         # query
-        query = "SELECT * FROM states WHERE BINARY name = '{}'\
-                ORDER BY id".format(str(s_name))
+        query = "SELECT * FROM states WHERE name = '{}'\
+                ORDER BY id".format(s_name)
         cur.execute(query)
 
         # Retrieve and store the queryset in state variable
