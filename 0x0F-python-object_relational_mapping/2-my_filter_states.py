@@ -45,10 +45,11 @@ if __name__ == '__main__':
         cur.execute(query)
 
         # Retrieve and store the queryset in state variable
-        state = cur.fetchall()
+        states = cur.fetchall()
 
         # Print the result to console (stdout)
-        print(state)
+        for state in states:
+            print(state)
 
         # Close open connection
         cur.close()
