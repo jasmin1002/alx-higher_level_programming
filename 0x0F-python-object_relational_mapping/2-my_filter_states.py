@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
         # query
         query = "SELECT * FROM states WHERE name = '{}'\
-                ORDER BY id".format(s_name)
+                ORDER BY id".format(str(s_name))
         cur.execute(query)
 
         # Retrieve and store the queryset in state variable
