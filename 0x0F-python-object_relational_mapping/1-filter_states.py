@@ -37,10 +37,11 @@ if __name__ == '__main__':
 
         # Create a cursor to execute a query
         cur = db.cursor()
-        cur.execute(
-            "SELECT * FROM states WHERE SUBSTR(name, 1, 1) = 'N'\
-                ORDER BY id ASC"
-        )
+
+        # Query
+        query = "SELECT * FROM states WHERE name LIKE BINARY 'N%'\
+                ORDER BY id"
+        cur.execute(query)
 
         # Retrieve and store the queryset in states variable
         states = cur.fetchall()
