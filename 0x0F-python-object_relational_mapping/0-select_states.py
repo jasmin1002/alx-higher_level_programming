@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+'''
+    This script uses MySQLdb module
+    to connect to MySQL database and
+    query the database for lists of 
+    states in states table.
+'''
 
 if __name__ == '__main__':
     import MySQLdb
