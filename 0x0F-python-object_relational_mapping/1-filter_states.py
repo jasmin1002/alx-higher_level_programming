@@ -55,5 +55,3 @@ if __name__ == '__main__':
 
     except MySQLdb.Error as err:
         print("MySQL Error: {}".format(err.args[1]))
-
-
