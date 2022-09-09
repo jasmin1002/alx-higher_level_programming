@@ -49,7 +49,10 @@ if __name__ == '__main__':
         # Retrieve and store the queryset
         city_table = cur.fetchall()
 
+        # Collate the queryset into flat list
         tmp = tuple(city for row in city_table for city in row)
+
+        # Concatenate the value of list in tmp by ', '
         cities = ', '.join(tmp)
 
         print(cities)
