@@ -14,8 +14,10 @@ class State(Base):
         State maps to a row in states table
 
         Attributes:
-            id (int): A row unique key for entity integrity
             name (string): A name description for a state
+
+        Args:
+            id (int): A row unique auto populate (entity integrity)
     '''
 
     #: str: Database table maps to.
