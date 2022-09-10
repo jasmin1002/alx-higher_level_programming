@@ -24,8 +24,6 @@ if __name__ == '__main__':
         # Create lazy connection with MySQL via mysqldb
         engine = create_engine(database_url, pool_pre_ping=True)
 
-        print(engine)
-
         # Create necessary MySQL database table
         # e.g CREATE TABLE table_name
         Base.metadata.create_all(engine)
@@ -33,9 +31,9 @@ if __name__ == '__main__':
         # Create a Session
         Session = sessionmaker(bind=engine)
         session = Session()
-        result = session.query(State).order_by(State.id).all()
+        states = session.query(State).order_by(State.id).all()
 
-        for state in result:
+        for state in states:
             print("{}: {}".format(state.id, state.name))
 
     except ValueError:
