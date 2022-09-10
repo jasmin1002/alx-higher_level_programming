@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
         # Retrieve the first row in a database table
         # after successful connection
-        state = session.query(State).first()
+        state = session.query(State).order_by(State.id).first()
 
         # Print retrieved information
         if state is None:
