@@ -17,7 +17,9 @@ if __name__ == '__main__':
     # Unpack inputs value
     try:
         username, passwd, db_name = inputs
-        database_url = "mysql+mysqldb://{}:{}@localhost/{}".format(username, passwd, db_name)
+        database_url = "mysql+mysqldb://{}:{}@localhost/{}".format(
+            username, passwd, db_name
+        )
 
         # Create lazy connection with MySQL via mysqldb
         engine = create_engine(database_url, pool_pre_ping=True)
