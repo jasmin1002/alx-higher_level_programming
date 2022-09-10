@@ -34,13 +34,12 @@ if __name__ == '__main__':
 
         # Retrieve all states that contain 'a'
         # after successful connection
-        states = session.query(State).order_by(State.id).all()
+        states = session.query(State).filter(
+            State.name.like('%a%')
+        ).order_by(State.id).all()
 
         for state in states:
-            name = state.__dict__['name']
-
-            if name.find('a') != -1:
-                print("{}: {}".format(state.id, name))
+            print("{}: {}".format(state.id, state.name))
 
         session.close()
     except ValueError:
