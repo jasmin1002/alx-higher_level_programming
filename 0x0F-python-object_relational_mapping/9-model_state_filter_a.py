@@ -34,9 +34,8 @@ if __name__ == '__main__':
 
         # Retrieve all states that contain 'a'
         # after successful connection
-        states = session.query(State).filter(
-            State.name.like('%a%')
-        ).order_by(State.id).all()
+        states = session.query(State).filter(State.name.like('%a%')).\
+            order_by(State.id).all()
 
         for state in states:
             print("{}: {}".format(state.id, state.name))
