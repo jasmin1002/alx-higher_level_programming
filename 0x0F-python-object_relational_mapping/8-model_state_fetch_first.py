@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
         # Print retrieved information
         if state is None:
-            print("Nothing\n")
+            print("Nothing")
         else:
             print("{}: {}".format(state.id, state.name))
 
