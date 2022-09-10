@@ -36,6 +36,7 @@ if __name__ == '__main__':
         for state in states:
             print("{}: {}".format(state.id, state.name))
 
+        session.close()
     except ValueError:
         msg = "Not enough inputs (expect 3, got {})".format(len(inputs))
         print(msg)
