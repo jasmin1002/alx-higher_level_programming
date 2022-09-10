@@ -38,7 +38,7 @@ if __name__ == '__main__':
         state = session.query(State).first()
 
         # Print retrieved information
-        if state == None:
+        if state is None:
             print("Nothing\n")
         else:
             print("{}: {}".format(state.id, state.name))
@@ -47,7 +47,7 @@ if __name__ == '__main__':
         session.close()
 
     except ValueError:
-        msg = "Not enough inputs (expect 3, got {}".format(len(inputs))
+        msg = "Not enough inputs (expect 3, got {})".format(len(inputs))
         print(msg)
     except Exception as err:
         print("Error: {}".format(err))
