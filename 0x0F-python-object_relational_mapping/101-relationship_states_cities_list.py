@@ -40,7 +40,7 @@ if __name__ == '__main__':
             # Print each city attached to each state in
             # cities collection
             for city in state.cities:
-                print("\t {}: {}".format(city.id, city.name))
+                print("\t{}: {}".format(city.id, city.name))
 
         # Close connection
         session.close()
