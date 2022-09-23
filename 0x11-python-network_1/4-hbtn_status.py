@@ -16,6 +16,6 @@ if __name__ == '__main__':
     content = res.text
 
     # Print format
-    output = 'Body response:\n\t- type: {}\n\
-        - content: {}'.format(type(content), content)
+    output = 'Body response:\n\t- type: {}\n\t- content: {}'\
+        .format(type(content), content)
     print(output)
