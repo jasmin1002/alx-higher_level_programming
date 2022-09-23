@@ -10,7 +10,7 @@ if __name__ == '__main__':
     # Unpack input arguments
     try:
         url, email = argv[1:]
-    # Catch error    
+    # Catch error
     except ValueError as er:
         # msg (Error message)
         msg = 'Expect 2 arguments, (got {})'.format(len(argv[1:]))
