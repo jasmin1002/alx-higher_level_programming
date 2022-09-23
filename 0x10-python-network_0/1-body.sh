@@ -1,4 +1,3 @@
 #!/bin/bash
-# Uses get method and displays response body
-# if it 200 status code
+# Script use GET method and display response body for 200 ok code
 curl -sf "$1"
