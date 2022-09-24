@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 '''
-    Script demonstrates GitHub API
+    Script makes HTTPS GET request and uses
+    GitHub API to display authenticate user's id
+    GitHub credentials(username and passwrod) are
+    passed in this order:
+
+    username => first argument
+    password => second argument
+
+    password (Personal Access Token, PAT)
 '''
 
 if __name__ == '__main__':
@@ -23,14 +31,17 @@ if __name__ == '__main__':
         msg = 'Expect only username and password as arguments'
         print(msg)
 
-    # Provided authentication credentials
-    credential = HTTPBasicAuth(username, token)
-
-    # Make HTTPS GET request
-    res = requests.get(url, auth=credential)
-
-    if res.status_code == 200:
-        dict_data = res.json()
-        print(dict_data['id'])
     else:
-        print('None')
+        # Provided authentication credentials
+        credential = HTTPBasicAuth(username, token)
+
+        # Make HTTPS GET request
+        res = requests.get(url, auth=credential)
+
+        # Check authentication status
+        if res.status_code == 200:
+            dict_data = res.json()
+            print(dict_data['id'])
+
+        else:
+            print('None')
