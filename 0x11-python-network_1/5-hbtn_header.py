@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-    Script demonstrates HTTP GET request by 
+    Script demonstrates HTTP GET request by
     passed URL
 '''
 
