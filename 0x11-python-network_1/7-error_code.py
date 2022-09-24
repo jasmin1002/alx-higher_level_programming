@@ -6,10 +6,10 @@
 if __name__ == '__main__':
     from sys import argv
     import requests
-    
+
     # url
     url = argv[1]
-    
+
     # Make HTTP GET request
     res = requests.get(url)
 
