@@ -5,7 +5,6 @@
 
 if __name__ == '__main__':
     from sys import argv
-    from requests import codes
     import requests
 
     # url
@@ -14,16 +13,17 @@ if __name__ == '__main__':
     # query value
     q = ''
 
-    try:
-        q = argv[1]
-    except IndexError:
-        print('No result')
+    if len(argv) < 2:
+        q = ''
     else:
+        q = argv[1]
+
+    try:
         res = requests.post(url, data={'q': q})
         data = res.json()
         if len(data) == 0:
             print('No result')
-        elif res.status_code != codes.ok:
-            print('Not a valid JSON')
         else:
             print('[{}] {}'.format(data['id'], data['name']))
+    except requests.exceptions:
+        print('Not a valid JSON')
