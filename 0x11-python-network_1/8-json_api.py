@@ -25,5 +25,5 @@ if __name__ == '__main__':
             print('No result')
         else:
             print('[{}] {}'.format(data['id'], data['name']))
-    except requests.exceptions.HTTPError:
+    except ValueError:
         print('Not a valid JSON')
