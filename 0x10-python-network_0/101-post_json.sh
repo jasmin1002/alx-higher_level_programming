@@ -1,3 +1,3 @@
 #!/bin/bash
 # cURL a JSON file
-curl -sX POST --data-urlencode @$2 $1
+curl -sX POST -H "Content-Type: application/json" -d @$2 $1
