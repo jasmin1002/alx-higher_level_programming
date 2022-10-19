@@ -11,7 +11,4 @@ const parameters = process.argv.splice(2, 2);
 request
   .get(parameters[0])
   .on('error', err => console.error(err))
-  .on('response', response => {
-    if (response.statusCode === 200) console.log('Good to go...');
-  })
   .pipe(fs.createWriteStream(parameters[1]));
