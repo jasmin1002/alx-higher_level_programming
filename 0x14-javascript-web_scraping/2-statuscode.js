@@ -7,6 +7,6 @@ if (!url) console.log('No url found!');
 else {
   request.get(url, (error, response) => {
     if (error) console.log(error);
-    else console.log('code: ', response && response.statusCode);
+    else console.log(`code: ${response && response.statusCode}`);
   });
 }
